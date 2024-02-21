@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Download Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    #loading-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #logo {
+      width: 100px; /* Adjust the width as needed */
+      margin-bottom: 20px; /* Add margin for spacing */
+    }
+
+    #loading-circle {
+      border: 8px solid #5a16ff;
+      border-top: 8px solid #f4f4f4;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 2s linear infinite;
+    }
+
+    #download-button {
+      display: none;
+      margin-top: 20px;
+    }
+
+    #download-button button {
+      background-color: #5a16ff;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px; /* Adding border-radius */
+    }
+
+    #loading-message {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loading-container">
+    <img id="logo" src="https://www.udrop.com/file/Lx0K/Your_paragraph_text_(4).png" alt="Your Logo"> <!-- Add your logo image here -->
+    <div id="loading-circle"></div>
+    <div id="loading-message">Fetching links...</div>
+    <div id="download-button">
+      <button onclick="downloadVideo()">Download Video</button>
+    </div>
+  </div>
+
+  <script>
+    // Function to simulate video download
+    function downloadVideo() {
+      window.location.href = 'https://www.udrop.com/file/Lxdd/Hokkaido-Gals-Are-Super-Adorable-S01E01-720p-HIN-ENG-JAP-PIKAHD.COM.mkv.compressed.mp4';
+    }
+
+    // Delay function to show download button after 2 seconds
+    function showDownloadButton() {
+      document.getElementById('loading-circle').style.display = 'none';
+      document.getElementById('loading-message').style.display = 'none';
+      document.getElementById('download-button').style.display = 'block';
+    }
+
+    // Set timeout to show download button after 2 seconds
+    setTimeout(showDownloadButton, 2000);
+  </script>
+
+</body>
+</html>
